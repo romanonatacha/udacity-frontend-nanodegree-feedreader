@@ -41,16 +41,18 @@ $(function() {
                 expect(typeof feed.name).toBe('string');
             });
         });
-        
-
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
-         */
     });
 
 
     /* TODO: Write a new test suite named "The menu" */
+
+    describe('the menu', function() {
+
+        // checks if body tag has class 'menu-hidden', and confirm that the menu is hidden
+        it('menu hidden', function() {
+            expect($('body').hasClass('menu-hidden')).toBe(true);
+        });
+    });
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
