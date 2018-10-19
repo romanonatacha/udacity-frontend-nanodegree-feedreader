@@ -52,6 +52,15 @@ $(function() {
         it('menu hidden', function() {
             expect($('body').hasClass('menu-hidden')).toBe(true);
         });
+
+        // test the toggle menu, when click, if it has the class 'menu-hidden'
+        it('toggle menu hidde and show', function() {
+            $('.menu-icon-link').click();
+            expect($('body').hasClass('menu-hidden')).toBe(false);
+            $('.menu-icon-link').click();
+            expect($('body').hasClass('menu-hidden')).toBe(true);
+
+        });
     });
 
         /* TODO: Write a test that ensures the menu element is
