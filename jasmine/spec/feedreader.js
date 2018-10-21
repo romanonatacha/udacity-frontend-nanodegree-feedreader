@@ -39,6 +39,7 @@ $(function() {
             allFeeds.forEach(function (feed) {
                 expect(feed.name).toBeDefined();
                 expect(typeof feed.name).toBe('string');
+                expect(feed.name).not.toBe('');
             });
         });
     });
@@ -70,9 +71,7 @@ $(function() {
 
         // test that ensures when the loadFeed function is called, and completes its work
         beforeEach(function (done) {
-            loadFeed(0, function() {
-                done();
-            });
+            loadFeed(0, done);
         });
 
 
